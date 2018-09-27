@@ -1,0 +1,56 @@
+name = "Test"
+
+[goals]
+
+    [goals.1]
+    name = "Grow Mobile Advertising"
+
+[actors]
+
+    [actors.1]
+    name = "Super-Fans with Mobile Devices"
+    goal = 1
+
+    [actors.2]
+    name = "Concert Organizers"
+    goal = 1
+
+    [actors.3]
+    name = "Artist Agents and Promotors"
+    goal = 1
+
+[impacts]
+
+    [impacts.1]
+    name = "Come Back More Frequently"
+    actor = 1
+
+    [impacts.2]
+    name = "Stay Longer"
+    actor = 1
+
+    [impacts.3]
+    name = "View More Ads"
+    actor = 1
+
+[deliverables]
+
+    [deliverables.1]
+    name = "Push Updates"
+    impact = 1
+
+    [deliverables.2]
+    name = "Special Offers"
+    impact = 1
+
+    [deliverables.3]
+    name = "Forums"
+    impact = 2
+
+    [deliverables.4]
+    name = "Chats"
+    impact = 2
+
+    [deliverables.5]
+    name = "Better Pagination"
+    impact = 3

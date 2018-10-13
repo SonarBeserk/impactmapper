@@ -1,0 +1,39 @@
+digraph Test {
+	node [style="filled,rounded", shape=box];
+
+	subgraph cluster_goal {
+		node[color=darkgoldenrod]
+		{ Goal1[label="Grow Mobile Advertising"] }
+		label = "Goal";
+		color = darkgoldenrod
+	}
+
+	subgraph cluster_actor {
+		node [color=forestgreen]
+		Goal1 -> { Actor1[label="Super-Fans with Mobile Devices"] }
+		Goal1-> { Actor2[label="Concert Organizers"] }
+		Goal1 -> { Actor3[label="Artist Agents and Promoters"] }
+		label = "Actor";
+		color = forestgreen
+	}
+
+	subgraph cluster_impact {
+		node[color=dodgerblue]
+		Actor1 -> { Impact1[label="Come Back More Frequently"] }
+		Actor1 -> { Impact2[label="Stay Longer"] }
+		Actor1 -> { Impact3[label="View More Ads"] }
+		label = "Impact";
+		color = dodgerblue
+	}
+
+	subgraph cluster_deliverable {
+		node[color=deeppink]
+		Impact1 -> { Deliverable1[label="Push Updates"] }
+		Impact1 -> { Deliverable2[label="Special Offers"] }
+		Impact2 -> { Deliverable3[label="Forums"] }
+		Impact2 -> { Deliverable4[label="Chats"] }
+		Impact3 -> { Deliverable5[label="Better Pagination"] }
+		label = "Deliverable";
+		color = deeppink
+	}
+}

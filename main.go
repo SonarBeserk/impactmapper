@@ -43,6 +43,7 @@ type Deliverable struct {
 // Data is used to write the template
 type Data struct {
 	Name         string
+	Mode         string
 	Goals        map[string]Goal
 	Actors       map[string]Actor
 	Impacts      map[string]Impact

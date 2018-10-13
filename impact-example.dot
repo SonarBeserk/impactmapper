@@ -4,16 +4,16 @@ digraph Test {
 
 	subgraph cluster_goal {
 		node[color=darkgoldenrod]
-		{ Goal[label="Grow Mobile Advertising"] }
+		{ Goal1[label="Grow Mobile Advertising"] }
 		label = "Goal";
 		color = darkgoldenrod
 	}
 
 	subgraph cluster_actor {
 		node [color=forestgreen]
-		Goal -> { Actor1[label="Super-Fans with Mobile Devices"] }
-		Goal -> { Actor2[label="Concert Organizers"] }
-		Goal -> { Actor3[label="Artist Agents and Promoters"] }
+		Goal1 -> { Actor1[label="Super-Fans with Mobile Devices"] }
+		Goal1-> { Actor2[label="Concert Organizers"] }
+		Goal1 -> { Actor3[label="Artist Agents and Promoters"] }
 		label = "Actor";
 		color = forestgreen
 	}
@@ -38,5 +38,5 @@ digraph Test {
 		color = deeppink
 	}
 
-	{ rank=same; Goal; Actor1; Impact1; Deliverable1; }
+	{ rank=same; Goal1; Actor1; Impact1; Deliverable1; }
 }

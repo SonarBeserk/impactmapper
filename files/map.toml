@@ -1,5 +1,5 @@
 name = "Test"
-mode = "horizontal" // Or vertical
+mode = "horizontal" # Or vertical
 
 [goals]
 

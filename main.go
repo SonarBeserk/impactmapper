@@ -70,7 +70,7 @@ type Data struct {
 func main() {
 	if _, err := os.Stat(templateName + ".toml"); os.IsNotExist(err) {
 		os.WriteFile(templateName+".default.toml", defaultToml, 0644)
-		log.Fatalln("Failed to find map.toml file, created example file")
+		log.Fatalf("Failed to find map.toml file, created example file.\nPlease rename the file to map.toml, change it to your desired structure, and rerun the tool.\n")
 	}
 
 	var data Data

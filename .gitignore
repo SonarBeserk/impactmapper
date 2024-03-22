@@ -13,4 +13,10 @@
 
 # Config files
 map*.toml
+
+# Include templates
 !files/*
+
+# Include only example dot files
+*.dot
+!examples/*

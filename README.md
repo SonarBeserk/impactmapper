@@ -21,3 +21,7 @@ Building the tool is as simple as running a build in the root of the repository:
 which will create an `impactmapper` binary that matches your operating system. You can then run the tool to be provided an example toml file you can edit to match the structure you wish to you.
 
 You will then simply run the `impactmapper` binary in the same directory as the `map.toml` and it will generate a graphviz compatible dot file. You can use any compatible previewer such as [Graphviz Interactive Preview](https://marketplace.visualstudio.com/items?itemName=tintinweb.graphviz-interactive-preview) for VSCode.
+
+You will get a resulting file with something similar to the following:
+
+![Screenshot of the example impact map rendered using the Graphviz Interactive Preview extension](examples/impact.svg)

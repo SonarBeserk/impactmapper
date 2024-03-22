@@ -6,7 +6,7 @@ Also uses [toml](https://github.com/toml-lang/toml) files parsed by a [toml pars
 
 ## Modes
 
-The mapper supports two modes, horizontal and vertical. The horizontal mode matches what the impact maps site while the vertical looks more like a tree.
+The mapper supports two modes, horizontal and vertical. The horizontal mode matches what the impact maps site while the vertical looks more like a tree. You can view examples in the [Examples folder](examples/).
 
 ## Development
 

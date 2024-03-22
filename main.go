@@ -2,7 +2,7 @@ package main
 
 import (
 	"bufio"
-	"io/ioutil"
+	"embed"
 	"log"
 	"os"
 	"text/template"
@@ -10,12 +10,29 @@ import (
 	"github.com/BurntSushi/toml"
 )
 
+//go:embed files/*
+var files embed.FS
+
 var (
-	tmpl        = string(MustAsset("files/dot.tmpl"))
-	defaultToml = MustAsset("files/map.toml")
+	tmpl        string
+	defaultToml []byte
 
 	templateName = "map"
 )
+
+func init() {
+	tmplBytes, err := files.ReadFile("files/dot.tmpl")
+	if err != nil {
+		panic("Error parsing dot template: " + err.Error())
+	}
+	tmpl = string(tmplBytes)
+
+	tomlBytes, err := files.ReadFile("files/map.toml")
+	if err != nil {
+		panic("Error parsing toml: " + err.Error())
+	}
+	defaultToml = tomlBytes
+}
 
 // Goal is an outcome
 type Goal struct {
@@ -52,7 +69,7 @@ type Data struct {
 
 func main() {
 	if _, err := os.Stat(templateName + ".toml"); os.IsNotExist(err) {
-		ioutil.WriteFile(templateName+".default.toml", defaultToml, 0644)
+		os.WriteFile(templateName+".default.toml", defaultToml, 0644)
 		log.Fatalln("Failed to find map.toml file, created example file")
 	}
 
